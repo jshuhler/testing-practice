@@ -1,0 +1,1 @@
+Practicing writing test cases and coding javascript exercises using Test Driven Development. Part of the Javascript course of [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-testing-practice).
