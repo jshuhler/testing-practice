@@ -25,6 +25,10 @@ test('Valid input', () => {
     expect(capitalize("One long string")).toBe("One long string");
 });
 
+test('Non string input', () => {
+    expect(capitalize("1234")).toBe("1234");
+});
+
 // mix case input
 // multiword
 // numbers
