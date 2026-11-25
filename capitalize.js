@@ -1,8 +1,6 @@
-function capitalize(str) {
+export function capitalize(str) {
     let lowerArray = str.toLowerCase().split('');
-    let capLetter = lowerArray[0].toUpperCase()
-    let capString = capLetter + lowerArray.splice(1).join;
-    console.log(capString)
-}
+    let capLetter = lowerArray[0].toUpperCase();
+    return capLetter + lowerArray.splice(1).join("");}
 
 capitalize('qWeRTy')

@@ -1,10 +1,21 @@
-const capitalize = require('./capitalize');
+import { capitalize } from "./capitalize.js";
 
 test('Mix case input', () => {
-    expect(capitalize('qWeRTy')).toBe('Qwerty');
+    expect(capitalize("qWeRTy")).toBe("Qwerty");
+    expect(capitalize("cOmpUTeR")).toBe("Computer");
 });
 
+test('Multi word input', () => {
+    expect(capitalize("multiword strings don't matter")).toBe("Multiword strings don't matter");
+    expect(capitalize("typing typing blah BLAH")).toBe("Typing typing blah blah");
+});
+
+test('Letter and non-letter input', () => {
+    expect(capitalize("qwerty789")).toBe("Qwerty789");
+})
+
+// mix case input
 // multiword
 // numbers
-// all lowercase
+// all uppercase
 // correct capitalization already
