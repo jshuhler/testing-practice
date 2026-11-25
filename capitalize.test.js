@@ -12,7 +12,18 @@ test('Multi word input', () => {
 
 test('Letter and non-letter input', () => {
     expect(capitalize("qwerty789")).toBe("Qwerty789");
-})
+    expect(capitalize("789qwErty.")).toBe("789qwerty.");
+});
+
+test('Uppercase input', () => {
+    expect(capitalize("LOUD NOISES")).toBe("Loud noises");
+    expect(capitalize("SCREAMING")).toBe("Screaming");
+});
+
+test('Valid input', () => {
+    expect(capitalize("Validity")).toBe("Validity");
+    expect(capitalize("One long string")).toBe("One long string");
+});
 
 // mix case input
 // multiword
