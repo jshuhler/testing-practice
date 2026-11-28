@@ -4,25 +4,28 @@ export function caesarCipher(str,key) {
     const splitStr = str.split("");
     let codedStr = [];
 
-    console.log(key)
+    console.log("key before for loop: ",key)
+    console.log("-----")
     for (let i = 0; i < splitStr.length; i++) {
-        let y = alphabet.indexOf(splitStr[i])
-        console.log("index of original letter: ",y)
-        if ((key+y) > 25) {
-            key = (key+y) % 26;
-            console.log("if loop executed key: ", key)
-            codedStr.push(alphabet[key+y]);
+        console.log("key at start of for loop: ",key)
+        let originalIndex = alphabet.indexOf(splitStr[i])
+        console.log("index of original letter: ",originalIndex)
+        if ((key+originalIndex) > 25) {
+            let shiftedKey = (key+originalIndex) % 26;
+            console.log("if loop executed shiftedKey: ", shiftedKey)
+            codedStr.push(alphabet[shiftedKey]);
         } else {
-            console.log("outside if loop key: ",key)
-            codedStr.push(alphabet[key+y]);
-        }
-        // console.log("key: ",key)
-        
-        // console.log("index of new letter: ",key+y)
+            console.log("outside if loop shiftedKey: ",key)
+            codedStr.push(alphabet[key+originalIndex]);
+        };
+        console.log("codedStr")
         console.log("-----")
     };
     console.log(codedStr.join(""))
     return codedStr.join("");
 };
 
-caesarCipher("zoom", 17)
+
+
+// caesarCipher("zoom", 113)
+// console.log(31%26)

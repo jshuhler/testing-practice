@@ -8,8 +8,10 @@ test('Single word lowercase string, no wrapping', () => {
 
 test('Single word lowercase string, wrapping', () => {
     expect(caesarCipher("zoom", 17)).toBe("qffd");
+    expect(caesarCipher("wrapping",-27)).toBe("vqzoohmf");
 });
 
+// TESTS:
 // single word lowercase string, no wrapping
 // single word lowercase string, wrapping
 // single word string, case preservation
